@@ -1,0 +1,16 @@
+# Intro to the Tidyverse
+
+<https://learn.datacamp.com/courses/introduction-to-the-tidyverse>
+
+
+## Data wrangling
+
+
+## Data visualization
+
+
+## Grouping and summarizing
+
+
+## Types of visualizations
+

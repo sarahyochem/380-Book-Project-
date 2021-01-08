@@ -1,0 +1,18 @@
+# Data Manipulation with dplyr
+
+<https://learn.datacamp.com/courses/data-manipulation-with-dplyr>
+
+
+##  Transforming Data with dplyr
+
+
+## Aggregating Data
+
+
+## Selecting and Transforming Data
+
+
+## Case Study: The babynames Dataset
+
+
+

@@ -1,0 +1,24 @@
+# Intermediate R
+
+<https://learn.datacamp.com/courses/intermediate-r>
+
+<span style="color:teal;font-weight:bold">(Note: If you do [Intermediate R for Finance](https://learn.datacamp.com/courses/intermediate-r-for-finance) instead, change the title of this bookdown chapter above and change the DataCamp chapter titles below. Whichever version of Intermediate R you do, delete this note)</span>
+
+
+
+
+## Conditionals and Control Flow
+
+
+## Loops
+
+
+## Functions
+
+
+## The apply family
+
+
+## Utilities
+
+

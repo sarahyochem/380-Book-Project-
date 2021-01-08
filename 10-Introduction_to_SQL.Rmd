@@ -1,0 +1,17 @@
+# Introduction to SQL
+
+<https://learn.datacamp.com/courses/introduction-to-sql>
+
+
+## Selecting columns
+
+
+## Filtering rows
+
+
+## Aggregate Functions
+
+
+## Aggregate Functions
+
+

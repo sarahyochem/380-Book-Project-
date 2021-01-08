@@ -1,0 +1,18 @@
+# Web Scraping in R
+
+<https://learn.datacamp.com/courses/web-scraping-in-r>
+
+
+
+## Introduction to HTML and Web Scraping
+
+
+## Navigation and Selection with CSS
+
+
+## Advanced Selection with XPATH
+
+
+## Scraping Best Practices
+
+

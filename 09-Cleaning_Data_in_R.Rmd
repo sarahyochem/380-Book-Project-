@@ -1,0 +1,18 @@
+# Cleaning Data in R
+
+<https://learn.datacamp.com/courses/cleaning-data-in-r>
+
+
+## Common Data Problems
+
+
+## Categorical and Text Data
+
+
+## Advanced Data Problems
+
+
+## Record Linkage
+
+
+

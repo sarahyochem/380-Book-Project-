@@ -1,0 +1,16 @@
+# Categorical Data in the Tidyverse
+
+<https://learn.datacamp.com/courses/categorical-data-in-the-tidyverse>
+
+
+## Introduction to Factor Variables
+
+
+## Manipulating Factor Variables
+
+
+## Creating Factor Variables
+
+
+## Case Study on Flight Etiquette
+

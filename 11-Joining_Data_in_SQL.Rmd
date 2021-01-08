@@ -1,0 +1,15 @@
+# Joining Data in SQL
+
+<https://learn.datacamp.com/courses/joining-data-in-postgresql>
+
+
+## Introduction to joins
+
+
+## Outer joins and cross joins
+
+
+## Set theory clauses
+
+
+## Subqueries

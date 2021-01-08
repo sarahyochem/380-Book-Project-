@@ -1,0 +1,23 @@
+--- 
+title: "Econ 380 Book Project"
+author: "380 Student"
+date: "`r Sys.time()`"
+site: bookdown::bookdown_site
+bibliography: references.bib
+biblio-style: apalike
+link-citations: yes
+---
+
+# General Notes {-}
+
+After you get started with your BP you can delete everything from here down in this file (including this sentence...but leave the part above.)
+
+Make sure to open _bookdown.yml and update the 3 URLs to replace "YOUR REPO NAME" with the name of your repo.
+
+The first file in bookdown is always index.rmd (and the resulting output file, index.html, is the first file GitHub pages will display). Thus, this must be the first file of your book. You can use this first chapter however you want. I suggest adding additional notes that don't fit specifically in other parts of your book. 
+
+Note that you can cross-reference headings (and sub-headings, and 3rd level headings, etc). For example, here's a cross-reference to the Intermediate R chapter: [Intermediate R]. You can also cross-reference with a custom name, such as [this is a link to the Intermediate R chapter][Intermediate R].^[See [here](https://bookdown.org/yihui/bookdown/cross-references.html) for more details.]
+
+I would leave the author as "380 Student" so that your BP remains anonymous, even when displayed online via GitHub Pages.
+
+
