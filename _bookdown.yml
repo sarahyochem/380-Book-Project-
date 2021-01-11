@@ -2,6 +2,6 @@ book_filename: "BP"
 output_dir: docs
 delete_merged_file: true
 new_session: yes
-edit: https://github.com/econ380w21/YOUR REPO NAME/edit/master/%s
-view: https://github.com/econ380w21/YOUR REPO NAME/blob/master/%s
-history: https://github.com/econ380w21/YOUR REPO NAME/commits/master/%s
+edit: https://github.com/econ380w21/380-Book-Project-/edit/master/%s
+view: https://github.com/econ380w21/380-Book-Project-/blob/master/%s
+history: https://github.com/econ380w21/380-Book-Project-/commits/master/%s
