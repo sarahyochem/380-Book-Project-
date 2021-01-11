@@ -238,21 +238,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span style="color:teal;font-weight:bold">(Note: If you do <a href="https://learn.datacamp.com/courses/introduction-to-r-for-finance">Introduction to R for Finance</a> instead, change the title of this bookdown chapter above and change the DataCamp chapter titles below. Whichever version of Intro to R you do, delete this note)</span></p>
 <div id="intro-to-basics" class="section level2">
 <h2><span class="header-section-number">1.1</span> Intro to basics</h2>
+<p>You can use the (#) to add comments</p>
+<p>Arithmic with R</p>
+<p>Addition: +</p>
+<p>Subtraction: -</p>
+<p>Multiplication: *</p>
+<p>Division: /</p>
+<p>Exponentation: ^</p>
+<p>Modulo: %%</p>
+<p>Variable Assingment
+A variable allows you to store a value/object in R.
+Example:
+x &lt;- 12; the number 12 is now known as the variable x
+dessert &lt;-“cookie”</p>
+<p>To combine multiple variables you use the +
+Example: my_fruit &lt;- my_apples + my_oranges</p>
+<p>Basic Data Types in R</p>
+<p>Numerics: Decimals values like 1.2</p>
+<p>Intergers: Whole numbers like 3</p>
+<p>Logical: Boolean Vales like True or False</p>
+<p>Characters: Text</p>
+<p>The class() command allows you to check the data type of a variable</p>
 </div>
 <div id="vectors" class="section level2">
 <h2><span class="header-section-number">1.2</span> Vectors</h2>
+<p>Create a Vector
+What is a Vector? A vector is a one dimension arrays that can hold numeric data,character data, or logical data.</p>
+<p>You can create a vector using the function c() and you seperate the vector elements with a comma.
+Example: numeric_vector &lt;- c(1, 2, 3)</p>
+<p>The names() fuction allows you to name the elements of the vector.
+Example: names(poker_vector) &lt;- c(“Monday”, “Tuesday”, “Wednesday”, “Thursday”, “Friday”)
+Note: Use assinging values/object to a variable to make it faster and easier.</p>
+<p>The sum() function calculates the sum of all elements of a vector.</p>
+<p>To compare totals of vectors use &gt; and it will tell you if the statement is TRUE or False
+Example: total_poker &gt; total_roulette; TRUE</p>
+<p>To select a certain element of the vector use []. When selecting multiple elements use the c() inside of the brackets.</p>
+<p>Alternative to the function c() is to use the :
+Example: poker_vector[c(1,2,3)] to poker_vector[1:3]</p>
+<p>The mean() fucntion calculates the average values in the vector.
+Logical comparison operators are:
+&lt; for less than
+&gt; for greater than
+&lt;= for less than or equal to
+&gt;= for greater than or equal to
+== for equal to each other
+!= not equal to each other
+These answers will come out as TRUE or FALSE</p>
 </div>
 <div id="matrices" class="section level2">
 <h2><span class="header-section-number">1.3</span> Matrices</h2>
+<p>What is a matrix?</p>
+<p>A matrix is a collection of elements of the same data type arranged into a fixed number of rows and columns.</p>
+<p>Use the matrix() function to create the matrix, if you want your matrix to be filled by rows use “byrow= TRUE”, if you want columns “byrow= FALSE”, also nrow= indicates how many rows.<br />
+Example: matrix(1:9, byrow=TRUE, nrow=3)</p>
+<p>Can also use variable names in matrix; matrix(box_office,…)</p>
+<p>You can add names for the rows and columns of a matrix. Use colnames(nameofmatrix)&lt;-nameofcolum and rownames(nameofmatrix)&lt;-nameofrow</p>
+<p>Calculate the total of the rows in the matrix create a new vector: rowSums(my_matrix)</p>
+<p>Calculate the total of the columns in the matrix create a new vector: colSums(my_matrix)</p>
+<p>The fuction cbind() allows you to add a column or multiple to a matrix.</p>
+<p>The fuction rbind() allows you to add a row or multiple to a matrix.</p>
+<p>Selecting Elements of Matrix:
+my_matrix[1,2] selects the element at the first row and second column.</p>
+<p>my_matrix[1:3,2:4] results in a matrix with the data on the rows 1, 2, 3 and columns 2, 3, 4.</p>
+<p>my_matrix[,1] selects all elements of the first column.</p>
+<p>my_matrix[1,] selects all elements of the first row.
+Notes: You can use arithmetic with matrices(ex: multiply them by eachother)</p>
 </div>
 <div id="factors" class="section level2">
 <h2><span class="header-section-number">1.4</span> Factors</h2>
+<p>The term factor refers to a statistical data type used to store categorical variables. The difference between a categorical variable and a continuous variable is that a categorical variable can belong to a limited number of categories. A continuous variable, on the other hand, can correspond to an infinite number of values.</p>
+<p>To create a factor:
+First thing that you have to do is create a vector that contains all the observations that belong to a limited number of categories.</p>
+<p>The use the function factor()</p>
+<p>Types of categorical variables:</p>
+<p>nominal: variable without an implied order</p>
+<p>ordinal: variables do have a natural ordering</p>
+<p>To convert variables factor() defalts to transform to unordered factors, To create an ordered factor you have to add ordered and levels
+Example:
+factor_speed_vector &lt;- factor(speed_vector,
+ordered=TRUE,
+levels=c(“slow”, “medium”, “fast”))</p>
+<p>Factors have specfic factor levels, when you want to change the names of these levels use the function levels()</p>
+<p>The summary() function will give you a quick overview of the contents of the variable.</p>
 </div>
 <div id="data-frames" class="section level2">
 <h2><span class="header-section-number">1.5</span> Data frames</h2>
+<p>Datah frames can hold numeric, character or logical values. Within a column all elements have the same data type, but different columns can be of different data type.</p>
+<p>Functions:
+head() enables you to show the first observations of a data frame.</p>
+<p>tail() prints out the last observations in your data set.</p>
+<p>str() shows you the structure of your data set.</p>
+<p>data.frame() constructs the data frame</p>
+<p>subset() specfy the data set which you want to create a subset and then use
+subset= to create the subset
+Example: subset(planets_df, subset= diameter&lt;1)</p>
+<p>order() is a function that gives you the ranked position of each element when it is applied on a variable, such as a vector for example</p>
+<p>Note: selecting elements is the same as vectors and matrices. Alternative to using numerics is to use variable names.</p>
+<p>Short cut: planets_df[,“diameter”]=planets_df$diameter</p>
 </div>
 <div id="lists" class="section level2">
 <h2><span class="header-section-number">1.6</span> Lists</h2>
+<p>A list in R allows you to gather a variety of objects under one name in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc. It is not even required that these objects are related to each other in any way.</p>
+<p>To create list use the function list()
+Example: grocery&lt;- list(apples, oatmeal, chicken, broccil)</p>
+<p>To give your list names use the function names()
+Example: names(my_list)&lt;- c(“vec”, “mat”, “df”)</p>
+<p>When selecting spefic elements use: shining_list[[“reviews”]] or shining_list$reviews</p>
+<p>Notes: This is different then vectors that uses a single []</p>
 
 </div>
 </div>
@@ -293,15 +385,15 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/econ380w21/YOUR REPO NAME/edit/master/01-Intro_To_R.Rmd",
+"link": "https://github.com/econ380w21/380-Book-Project-/edit/master/01-Intro_To_R.Rmd",
 "text": "Edit"
 },
 "history": {
-"link": "https://github.com/econ380w21/YOUR REPO NAME/commits/master/01-Intro_To_R.Rmd",
+"link": "https://github.com/econ380w21/380-Book-Project-/commits/master/01-Intro_To_R.Rmd",
 "text": null
 },
 "view": {
-"link": "https://github.com/econ380w21/YOUR REPO NAME/blob/master/01-Intro_To_R.Rmd",
+"link": "https://github.com/econ380w21/380-Book-Project-/blob/master/01-Intro_To_R.Rmd",
 "text": null
 },
 "download": null,

@@ -9,20 +9,166 @@
 
 
 ## Intro to basics
-hey
+You can use the (#) to add comments 
+
+Arithmic with R
+
+Addition: + 
+
+Subtraction: -
+
+Multiplication: *
+
+Division: /
+
+Exponentation: ^
+
+Modulo: %%
+
+Variable Assingment 
+A variable allows you to store a value/object in R. 
+Example: 
+x <- 12; the number 12 is now known as the variable x 
+dessert <-"cookie"
+
+To combine multiple variables you use the + 
+Example: my_fruit <- my_apples + my_oranges 
+
+Basic Data Types in R 
+
+Numerics: Decimals values like 1.2 
+
+Intergers: Whole numbers like 3 
+
+Logical: Boolean Vales like True or False 
+
+Characters: Text 
+
+The class() command allows you to check the data type of a variable 
+
 
 ## Vectors
+Create a Vector 
+What is a Vector? A vector is a one dimension arrays that can hold numeric data,character data, or logical data. 
 
+You can create a vector using the function c() and you seperate the vector elements with a comma. 
+Example: numeric_vector <- c(1, 2, 3)
+
+The names() fuction allows you to name the elements of the vector. 
+Example: names(poker_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday") 
+Note: Use assinging values/object to a variable to make it faster and easier. 
+
+The sum() function calculates the sum of all elements of a vector. 
+
+To compare totals of vectors use > and it will tell you if the statement is TRUE or False
+Example: total_poker > total_roulette; TRUE 
+
+To select a certain element of the vector use []. When selecting multiple elements use the c() inside of the brackets. 
+
+Alternative to the function c() is to use the : 
+Example: poker_vector[c(1,2,3)] to poker_vector[1:3] 
+
+The mean() fucntion calculates the average values in the vector. 
+Logical comparison operators are: 
+< for less than
+> for greater than
+<= for less than or equal to
+>= for greater than or equal to
+== for equal to each other
+!= not equal to each other
+These answers will come out as TRUE or FALSE 
 
 ## Matrices
+
+What is a matrix? 
+
+A matrix is a  collection of elements of the same data type arranged into a fixed number of rows and columns. 
+
+Use the matrix() function to create the matrix, if you want your matrix to be filled by rows use "byrow= TRUE", if you want columns "byrow= FALSE", also nrow= indicates how many rows.  
+Example: matrix(1:9, byrow=TRUE, nrow=3) 
+
+Can also use variable names in matrix; matrix(box_office,...)
+
+You can add names for the rows and columns of a matrix. Use colnames(nameofmatrix)<-nameofcolum and rownames(nameofmatrix)<-nameofrow
+
+Calculate the total of the rows in the matrix create a new vector: rowSums(my_matrix)
+
+Calculate the total of the columns in the matrix create a new vector: colSums(my_matrix)
+
+The fuction cbind() allows you to add a column or multiple to a matrix.
+
+The fuction rbind() allows you to add a row or multiple to a matrix.
+
+Selecting Elements of Matrix: 
+my_matrix[1,2] selects the element at the first row and second column.
+
+my_matrix[1:3,2:4] results in a matrix with the data on the rows 1, 2, 3 and columns 2, 3, 4.
+
+my_matrix[,1] selects all elements of the first column.
+
+my_matrix[1,] selects all elements of the first row.
+Notes: You can use arithmetic with matrices(ex: multiply them by eachother)
 
 
 ## Factors
 
+The term factor refers to a statistical data type used to store categorical variables. The difference between a categorical variable and a continuous variable is that a categorical variable can belong to a limited number of categories. A continuous variable, on the other hand, can correspond to an infinite number of values.
+
+To create a factor: 
+First thing that you have to do is create a vector that contains all the observations that belong to a limited number of categories.
+
+The use the function factor()
+
+Types of categorical variables:
+
+nominal: variable without an implied order
+
+ordinal: variables do have a natural ordering 
+
+To convert variables factor() defalts to transform to unordered factors, To create an ordered factor you have to add ordered and levels
+Example: 
+factor_speed_vector <- factor(speed_vector, 
+ordered=TRUE,
+levels=c("slow", "medium", "fast"))
+
+Factors have specfic factor levels, when you want to change the names of these levels use the function levels()
+
+The summary() function will give you a quick overview of the contents of the variable. 
 
 ## Data frames
 
+Datah frames can hold numeric, character or logical values. Within a column all elements have the same data type, but different columns can be of different data type.
+
+Functions:
+head() enables you to show the first observations of a data frame. 
+
+tail() prints out the last observations in your data set.
+
+str() shows you the structure of your data set. 
+
+data.frame() constructs the data frame 
+
+subset() specfy the data set which you want to create a subset and then use
+subset= to create the subset 
+Example: subset(planets_df, subset= diameter<1)
+
+order() is a function that gives you the ranked position of each element when it is applied on a variable, such as a vector for example
+
+Note: selecting elements is the same as vectors and matrices. Alternative to using numerics is to use variable names. 
+
+Short cut: planets_df[,"diameter"]=planets_df$diameter 
 
 ## Lists
 
+A list in R allows you to gather a variety of objects under one name in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc. It is not even required that these objects are related to each other in any way.
+
+To create list use the function list()
+Example: grocery<- list(apples, oatmeal, chicken, broccil)
+
+To give your list names use the function names()
+Example: names(my_list)<- c("vec", "mat", "df")
+
+When selecting spefic elements use: shining_list[["reviews"]] or shining_list$reviews
+
+Notes: This is different then vectors that uses a single []
 
